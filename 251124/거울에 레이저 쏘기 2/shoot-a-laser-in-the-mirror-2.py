@@ -30,19 +30,18 @@ slash = {
 
 
 
-# 종료 조건은 index > n
 # init direction
 init_direction = (0, 0, "")
 if k <= n:
     init_direction = (0, k - 1, "down")
     
 elif n < k <= 2*n:
-    init_direction = (n - 1, k - n - 1, "left")
+    init_direction = (k - n - 1, n -1, "left")
 elif 2*n < k <= 3*n:
     
-    init_direction = (n - 1,3*n - k - 1, "up")
+    init_direction = (n - 1,3*n - k, "up")
 else:
-    init_direction = (4*n - k - 1, 0, "right")
+    init_direction = (4*n - k, 0, "right")
 
 def check(x, y):
     return 0 <= x < n and 0 <= y < n
