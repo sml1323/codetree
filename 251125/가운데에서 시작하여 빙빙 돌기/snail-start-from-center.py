@@ -37,8 +37,6 @@ moving_count = {moving_number:2}
 
 
 while num < n*n:
-    nr = r + dr[direction]
-    nc = c + dc[direction]
     if moving_count[moving_number] > 0: # 횟수 증가할지  
         for _ in range(moving_number): 
             if num >= n*n:
