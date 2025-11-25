@@ -40,13 +40,14 @@ grid = [[0] * m for _ in range(n) ]
 r, c = 0, 0
 alphabet_idx = 0
 grid[r][c] = make_alphabet(alphabet_idx)
+repeat_count = 1
 
-# 조건 확인해야함
-while alphabet_idx < n * m - 1:
+while repeat_count < n * m:
     nr, nc = r + drs[direction], c + dcs[direction]
     if is_in_range(nr,nc) and grid[nr][nc] == 0:
         r, c = move(r, c, direction)
         alphabet_idx += 1
+        repeat_count += 1
         alphabet_idx = change_alphabet(alphabet_idx)
         value = make_alphabet(alphabet_idx)
         grid[r][c] = value
