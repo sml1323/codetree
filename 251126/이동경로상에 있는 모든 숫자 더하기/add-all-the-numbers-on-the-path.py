@@ -16,9 +16,6 @@ def change_direction(direction, string):
 def in_range(nr, nc):
     return 0 <= nr < N and 0 <= nc < N
 
-def move(r, c, direction):
-    nr, nc = r + dr[direction], c + dc[direction]
-    return nr, nc
 # init variables
 direction = 0
 init_position = N // 2 # mid
