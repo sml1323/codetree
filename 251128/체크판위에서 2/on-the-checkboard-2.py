@@ -14,7 +14,9 @@ middle_point = []
 # if W B W B
 
 sol = 0
-if init_foothold == "W":
+if grid[0][0] == grid[R-1][C-1]:
+    print(0)
+elif init_foothold == "W":
     for i in range(foothold_r + 1, R-1):
         for j in range(foothold_c + 1, C-1):
             if grid[i][j] == "B":
@@ -27,6 +29,7 @@ if init_foothold == "W":
             for j in range(foothold_c + 1, C - 1):
                 if grid[i][j] == "W":
                     sol += 1    
+    print(sol)
 else:
     for i in range(foothold_r + 1, R-1):
         for j in range(foothold_c + 1, C-1):
@@ -39,9 +42,9 @@ else:
             for j in range(foothold_c + 1, C - 1):
                 if grid[i][j] == "B":
                     sol += 1
+    print(sol)
 
 
-print(sol)
 
 
 
