@@ -18,4 +18,7 @@ for number in a:
 num = 0
 for i in range(len(new_number)):
     num = num * 2 + int(new_number[i])
-print(num)
+if count == 0:
+    print(0)
+else:
+    print(num)
