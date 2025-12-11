@@ -13,9 +13,9 @@ for i in range(1, n + 1):
 
 def calculate(start_room, moving_room):
     if start_room > moving_room:
-        dist = n - moving_room       
+        dist = n - (start_room - moving_room)       
     else:
-        dist = abs(start_room - moving_room)    
+        dist = moving_room - start_room
     return  dist * human_dict[moving_room]
 
 
