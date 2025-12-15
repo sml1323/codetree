@@ -12,8 +12,12 @@ for i in range(len(numbers)):
     for j in range(len(numbers)):
         if abs(f_idx - j) > 1:
             second_max = max(second_max, numbers[j])
-    sum_of_two = first_max + second_max
-    sol = max(sol, sum_of_two)
+    if second_max == 0:
+        pass
+
+    else:
+        sum_of_two = first_max + second_max
+        sol = max(sol, sum_of_two)
 
 
 
