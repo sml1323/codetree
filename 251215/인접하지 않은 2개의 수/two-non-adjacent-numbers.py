@@ -4,14 +4,20 @@ numbers = list(map(int, input().split()))
 # Please write your code here.
 
 
-first_max = max(numbers)
-f_idx = numbers.index(first_max)
-second_max = 0
-
+sol = 0
 for i in range(len(numbers)):
-    if abs(f_idx - i) > 1:
-        second_max = max(second_max, numbers[i])
+    first_max = numbers[i]
+    f_idx = i
+    second_max = 0
+    for j in range(len(numbers)):
+        if abs(f_idx - j) > 1:
+            second_max = max(second_max, numbers[j])
+    sum_of_two = first_max + second_max
+    sol = max(sol, sum_of_two)
 
-print(first_max + second_max)
+
+
+print(sol)
+
 
 
