@@ -29,6 +29,7 @@ def check_OhMok(r, c, direction, current):
                 break
     return OhMok == 5
 
+print_zero = 1
 for r in range(19):
     for c in range(19):
         current = board[r][c]
@@ -38,8 +39,10 @@ for r in range(19):
             if check_OhMok(r,c,d,current):
                 print(current)
                 print(r + drs[d] * 2 + 1,c + dcs[d] * 2 + 1)
+                print_zero = 0
                 break
                 
-    if r == 19 and c == 19:
-        print(0)
+if print_zero == 0:
+        
+    print(0)
 
