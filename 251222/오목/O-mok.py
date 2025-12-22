@@ -19,15 +19,15 @@ def check_condition(r,c):
             
 # 오목 확인 
 def check_OhMok(r, c, direction, current):
-    five = 1
+    OhMok = 1
     for i in range(5):
         r, c = move(r, c, direction)
         if check_condition(r, c):
             if board[r][c] == current:
-                five += 1
+                OhMok += 1
             else:
                 break
-    return five == 5
+    return OhMok == 5
 
 for r in range(19):
     for c in range(19):
@@ -40,4 +40,6 @@ for r in range(19):
                 print(r + drs[d] * 2 + 1,c + dcs[d] * 2 + 1)
                 break
                 
+    if r == 19 and c == 19:
+        print(0)
 
