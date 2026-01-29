@@ -14,25 +14,32 @@ else:
 
     # 1. 행 탐색
     for row in grid:
+        current_happy = 1
         current = row[0]
         for i in range(1, n):
             if row[i] == current:
-                sol += 1
-                break
+                current_happy += 1
+                if current_happy == m:
+                    sol += 1
+                    break
             else:
                 current = row[i]
     # 2. 열 탐색
     for i in range(n):
         col.append([row[i] for row in grid])
         current = col[i][0]
+        current_happy = 1
         for c in range(1, n):
             if col[0][c] == current:
-                sol += 1
-                break
+                current_happy += 1
+                if current_happy == m:
+                    sol += 1
+                    break
             else:
                 current = col[i][c]
             
     print(sol)
-                
+
+  
             
 
