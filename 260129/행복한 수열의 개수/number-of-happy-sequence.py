@@ -24,6 +24,7 @@ else:
                     break
             else:
                 current = row[i]
+                current_happy = 1
     # 2. 열 탐색
     for i in range(n):
         col.append([row[i] for row in grid])
@@ -37,6 +38,7 @@ else:
                     break
             else:
                 current = col[i][c]
+                current_happy = 1
             
     print(sol)
 
