@@ -30,7 +30,7 @@ else:
         current = col[i][0]
         current_happy = 1
         for c in range(1, n):
-            if col[0][c] == current:
+            if col[i][c] == current:
                 current_happy += 1
                 if current_happy == m:
                     sol += 1
